@@ -1,0 +1,106 @@
+<div class="game-plan-content">
+  <app-navigation></app-navigation>
+
+  <div class="tabs">
+    <div class="levels-tab">
+      Levels
+      <hr class="line1" />
+    </div>
+    <div class="challenges-tab">
+      Challenges
+      <hr class="line2" />
+    </div>
+    <div class="quest-tab">
+      Quests
+      <hr class="line3" />
+    </div>
+  </div>
+
+  <div class="searchbar">
+    <button class="opt-btn">
+      <img class="icon" src="assets/imgs/icons/filter_icon.png" />
+      <span class="btn-text">Filter</span>
+      <img class="icon-drp" src="assets/imgs/icons/dropdown_icon.png" />
+    </button>
+    <button class="opt-btn">
+      <img class="icon" src="assets/imgs/icons/sort_icon.png" />
+      <span class="btn-text">Sort</span>
+      <img class="icon-drp" src="assets/imgs/icons/dropdown_icon.png" />
+    </button>
+
+    <button class="search-input">
+      <img class="icon" src="assets/imgs/icons/search_icons.png" />
+      <span class="span-btn">Search </span>
+    </button>
+  </div>
+
+  <div class="challenges">
+    <div class="challenges-container">
+      <span class="challenge-numb">4 Challenges</span>
+      <button class="create-challenge">
+        Create New Challenge
+        <img class="icon-add" src="assets/imgs/icons/add_icon.png" />
+      </button>
+    </div>
+
+    <div class="challenge-cards">
+      <ng-container *ngFor="let card of cards">
+        <div class="challenge-card">
+          <div class="{{ card.classCol }}">
+            {{ card.status }}
+            <div class="{{ card.circle }}"></div>
+          </div>
+          <div class="img-placeholder">
+            <img class="pro-icon" src="assets/imgs/icons/mushroom_icon.png" />
+          </div>
+
+          <div class="card-title">
+            <h4 class="title">Click & Collect</h4>
+            <span class="date">12/12/2018 at 13:00</span>
+          </div>
+
+          <div class="card-paragraph">
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable eye.
+            </p>
+          </div>
+
+          <div class="card-contents">
+            <div class="frubies">
+              <img
+                class="frub-content-icon"
+                src="assets/imgs/icons/frubies_icon.png"
+              />
+              <span class="frub-title">5,000 Frubies</span>
+            </div>
+
+            <div class="milestones">
+              <img
+                class="miles-content-icon"
+                src="assets/imgs/icons/milestones_icon.png"
+              />
+              <span class="miles-title">3 Milestones</span>
+            </div>
+
+            <div class="points">
+              <img
+                class="star-content-icon"
+                src="assets/imgs/icons/star_icon.png"
+              />
+              <span class="points-title">2,500 Points</span>
+            </div>
+
+            <div class="quest">
+              <img
+                class="quest-content-icon"
+                src="assets/imgs/icons/tag_icon.png"
+              />
+              <span class="quest-title">The Big Thing</span>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
